@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+
+  <title>FreeReg</title>
+
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <!--[if lt IE 9]>
+    <script src="scripts/dist/html5shiv.js"></script>
+  <![endif]-->
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="568">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <script type="text/javascript">
+  /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
+  window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0];r.rel="stylesheet",r.href=e[o&&n?0:o?1:2],a.parentNode.insertBefore(r,a)},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+  grunticon( [ "styles/css/icons.data.svg.css", "styles/css/icons.data.png.css", "styles/css/icons.fallback.css" ] );
+  </script>
+  <noscript><link rel="stylesheet" type="text/css" href="styles/css/icons.fallback.css"></noscript>
+
+  <link rel="stylesheet" href="styles/css/palm.min.css">
+  <link rel="stylesheet" href="styles/css/lap_and_up.min.css" media="(min-width:571px)">
+
+  <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" href="styles/css/lap_and_up.min.css">
+  <![endif]-->
+
+  <!--[if lte IE 7]>
+    <link rel="stylesheet" href="styles/css/ie.min.css">
+  <![endif]-->
+</head>
+<body ontouchstart class="offcanvas  offcanvas--rev">
+
+  <style media="screen">
+    /* This is just here for the purposes of the ui page */
+    .sep {
+      margin-top: 120px;
+      margin-bottom: 72px;
+    }
+  </style>
+
+
+  <div class="site__header__nav  offcanvas__secondary">
+    <div class="site__header__nav__inner">
+
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="#">Database Contents</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Members</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </nav>
+
+      <nav class="social-links">
+        <ul>
+          <li><a href="#" target="_blank"><i class="icon__twitter" aria-hidden="true"></i><span class="accessibility">Twitter</span></a></li>
+          <li><a href="#"><i class="icon__rss" aria-hidden="true"></i><span class="accessibility">RSS</span></a></li>
+          <li><a href="#" target="_blank"><i class="icon__googleplus" aria-hidden="true"></i><span class="accessibility">Google+</span></a></li>
+          <li><a href="#" target="_blank"><i class="icon__facebook" aria-hidden="true"></i><span class="accessibility">Facebook</span></a></li>
+          <li><a href="#" target="_blank"><i class="icon__github" aria-hidden="true"></i><span class="accessibility">Github</span></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+
+  <div class="offcanvas__primary">
+    <header class="site__header" role="banner">
+      <div class="container">
+        <div class="banner-horz">
+          <img src="http://dummyimage.com/728x90/000/fff/?text=banner+ad">
+        </div>
+
+        <button type="button" id="trigger-offcanvas" class="site__header__menu-btn">
+          <span>Menu</span>
+          <i class="icon__cancel" aria-hidden="true"></i>
+        </button>
+
+        <a href="#" class="site__header__logo  icon__freebmd"><h1 class="accessibility">FreeBMD</h1></a>
+
+        <a href="#" class="site__header__freeukgen-logo  icon__freeukgen__project--dark"><span class="accessibility">A project by FreeUKGenealogy</span></a>
+      </div>
+    </header>
+
+    <main role="main" class="site__content  icon__honeycomb--top-right">
+
+      <div class="container">
+
+        <article>
+
+          <div class="grid">
+
+            <div class="grid__item  two-thirds  lap-three-fifths  palm-one-whole">
+
+              <header>
+                <h1 class="title">I am a page title</h1>
+              </header>
+
+              <section>
+                <p class="lede">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                </p>
+
+                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.</p>
+
+                <h2>This is a sub-heading</h2>
+
+                <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.
+                </p>
+
+                <h3>And a sub-sub-heading</h3>
+
+                <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica.
+                </p>
+              </section>
+
+            </div>
+
+            <!--
+              The .push-half--top class here is just a visual adjustment
+              to cater for the fact that the .title in the left column
+              is so large that its line-height makes the box on the right
+              seem out, when its really not.
+            -->
+            <div class="grid__item  one-third  lap-two-fifths  palm-one-whole  push-half--top">
+
+              <aside class="island  island--bordered">
+
+                <h3 class="beta  text--magenta">I am a page title</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+
+              </aside>
+
+              <aside class="islet  islet--bordered">
+
+                <h2 class="title-block">Some other title <a href="#" class="title-block__sub">show all</a></h2>
+                <ul class="boxed-nav">
+                  <li><a href="#">FreeREG</a></li>
+                  <li><a href="#">FreeCEN</a></li>
+                  <li><a href="#">FreeREG</a></li>
+                  <li><a href="#">FreeBMD</a></li>
+                  <li><a href="#">Government</a></li>
+                  <li><a href="#">Data</a></li>
+                  <li><a href="#">History</a></li>
+                  <li><a href="#">Technology</a></li>
+                </ul>
+
+              </aside>
+
+
+              <aside class="twitter">
+                <h2 class="twitter__title">Twitter <a href="https://twitter.com/FreeUKGen">@FreeUKGen</a></h2>
+                <p class="twitter__text">FreeUKGenealogy is now on Twitter. A warm welcome to our beautiful new followers</p>
+                <ul class="twitter__tools">
+                  <li class="twitter__tools__follow"><a href="#">Follow</a></li>
+                  <li><a href="#"><i class="icon__star" aria-hidden="true"></i><span class="accessibility">Favourite</span></a></li>
+                  <li><a href="#"><i class="icon__reply" aria-hidden="true"></i><span class="accessibility">Reply</span></a></li>
+                  <li><a href="#"><i class="icon__repost" aria-hidden="true"></i><span class="accessibility">Retweet</span></a></li>
+                </ul>
+              </aside>
+
+              <nav class="islet  islet--bordered">
+
+                <h2 class="title-block"><a href="#">Parent page</a></h2>
+
+                <ul class="sub-nav">
+                  <li class="">
+                    <a href="#">Menu item</a>
+                  </li>
+                  <li>
+                    <a href="#">Menu item</a>
+                  </li>
+                  <li>
+                    <a href="#">Menu item</a>
+                  </li>
+                  <li class="open">
+                    <a href="#">Menu item</a>
+                    <ul>
+                      <li>
+                        <a href="#">Child item</a>
+                      </li>
+                      <li>
+                        <a href="#">Child item</a>
+                      </li>
+                      <li>
+                        <a href="#">Child item</a>
+                      </li>
+                      <li class="open">
+                        <a href="#">Child item</a>
+                        <ul>
+                          <li>
+                            <a href="#">Grandchild item</a>
+                          </li>
+                          <li>
+                            <a href="#">Grandchild item</a>
+                          </li>
+                          <li class="active">
+                            <a href="#">Grandchild item</a>
+                          </li>
+                          <li>
+                            <a href="#">Grandchild item</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Child item</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Menu item</a>
+                  </li>
+                  <li>
+                    <a href="#">Menu item</a>
+                  </li>
+                </ul>
+
+              </nav>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <section>
+          <h1 class="title  sep">Tables</h1>
+
+          <table>
+            <caption><span>A table of data</span></caption>
+            <thead>
+              <th class="caps">Date</th>
+              <th>Surname</th>
+              <th>First name(s)</th>
+              <th>District</th>
+              <th>Vol</th>
+              <th>Page</th>
+            </thead>
+            <tr>
+              <th rowspan="5">Mar 1833</th>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316<a href="#" class="row-link"><span class="accessibility">Link to entry</span><i class="icon__eye" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316<a href="#" class="row-link"><span class="accessibility">Link to entry</span><i class="icon__eye" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316<a href="#" class="row-link"><span class="accessibility">Link to entry</span><i class="icon__eye" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316<a href="#" class="row-link"><span class="accessibility">Link to entry</span><i class="icon__eye" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316<a href="#" class="row-link"><span class="accessibility">Link to entry</span><i class="icon__eye" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <th rowspan="2">Apr 1845</th>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316<a href="#" class="row-link"><span class="accessibility">Link to entry</span><i class="icon__eye" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316</td>
+            </tr>
+            <tr>
+              <th rowspan="3">Dec 1891</th>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316</td>
+            </tr>
+            <tr>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316<a href="#" class="row-link"><span class="accessibility">Link to entry</span><i class="icon__eye" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr>
+              <td>Arnold</td>
+              <td>Thomas</td>
+              <td>Coventry</td>
+              <td>16</td>
+              <td>316</td>
+            </tr>
+          </table>
+
+        </section>
+
+
+        <h1 class="title  sep">Forms and Buttons</h1>
+
+        <section class="island  island--light">
+
+          <form class="grid">
+
+            <li class="grid__item  one-whole">
+              <h2 class="text--magenta">Image search</h2>
+              <p class="lede">Some introductory text for the start of  a form</p>
+            </li>
+
+            <li class="grid__item  one-half  palm-one-whole">
+              <label>First name</label>
+              <input name="firstname" type="text" class="text-input  text-input--success  icon__success" placeholder="Joe" />
+              <ul class="validation-list">
+                <li class="validation-list__success">This is fixed</li>
+                <li class="validation-list__success">This is also fixed</li>
+              </ul>
+            </li>
+
+            <li class="grid__item  one-half  palm-one-whole">
+              <label>Surname name</label>
+              <input name="surname" type="text" class="text-input" placeholder="Bloggs" />
+            </li>
+
+            <li class="grid__item  one-half  palm-one-whole  clear--left">
+              <label>A invalid field</label>
+              <input name="invalidexample" type="text" class="text-input  text-input--error  icon__error" placeholder="Oooh you baddie" />
+              <ul class="validation-list">
+                <li class="validation-list__error">This is an error</li>
+              </ul>
+            </li>
+
+            <li class="grid__item  one-half  palm-one-whole">
+              <label>An example select</label>
+              <select name="exampleselect" class="select  icon__select">
+                <option value="baptism">Baptism</option>
+                <option value="marriage">Marriage</option>
+                <option value="burial">Burial</option>
+              </select>
+            </li>
+
+            <li class="grid__item  one-half  palm-one-whole  clear--left">
+              <label>An erroring select</label>
+              <select name="exampleselect" class="select  icon__select-error  select--error">
+                <option value="baptism">Baptism</option>
+                <option value="marriage">Marriage</option>
+                <option value="burial">Burial</option>
+              </select>
+              <ul class="validation-list">
+                <li class="validation-list__error">This is an error</li>
+              </ul>
+            </li>
+
+            <li class="grid__item  one-half  palm-one-whole">
+              <label>A correct select</label>
+              <select name="exampleselect" class="select  icon__select-success  select--success">
+                <option value="baptism">Baptism</option>
+                <option value="marriage">Marriage</option>
+                <option value="burial">Burial</option>
+              </select>
+              <ul class="validation-list">
+                <li class="validation-list__success">This is correct, oh yay!</li>
+              </ul>
+            </li>
+
+            <li class="grid__item  one-whole  text--right">
+              <button class="btn" type="button">Search</button>
+              <button class="btn  btn--neutral" type="button">Cancel</button>
+            </li>
+
+          </form>
+
+        </section>
+
+
+
+
+
+        <h1 class="title  sep">Search results</h1>
+
+        <section class="island  island--light">
+          <div class="criteria-group">
+            <dl class="criteria">
+              <dt class="criteria__name">First name</dt>
+              <dd class="criteria__value">John</dd>
+            </dl>
+            <dl class="criteria">
+              <dt class="criteria__name">Last name</dt>
+              <dd class="criteria__value">Smith</dd>
+            </dl>
+            <dl class="criteria">
+              <dt class="criteria__name">Start year</dt>
+              <dd class="criteria__value">1925</dd>
+            </dl>
+            <dl class="criteria">
+              <dt class="criteria__name">End year</dt>
+              <dd class="criteria__value">1930</dd>
+            </dl>
+            <dl class="criteria">
+              <dt class="criteria__name">Type</dt>
+              <dd class="criteria__value">Baptism</dd>
+            </dl>
+            <dl class="criteria">
+              <dt class="criteria__name">Place</dt>
+              <dd class="criteria__value">Aldermarston (Berkshire)</dd>
+            </dl>
+          </div>
+
+          <div class="cf"></div>
+
+          <ul class="check-list">
+            <li>
+              <label for="exactMatch">
+                Exact matches
+                <input type="checkbox" name="exactMatch" value="yes" checked>
+              </label>
+            </li>
+            <li>
+              <label for="inclusive">
+                Inclusive
+                <input type="checkbox" name="inclusive" value="yes" checked>
+              </label>
+            </li>
+          </ul>
+
+          <span>4.5 mile radius (466 additional places)</span>
+
+          <a href="#" class="btn  btn--small  float--right">Revise search</a>
+
+        </section>
+
+        <ul class="pagination">
+          <li><a href="#"><i class="icon__arrow-left" aria-hidden="true"></i><span class="accessibility">Previous</span></a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#"><span class="accessibility">Next</span><i class="icon__arrow-right" aria-hidden="true"></i></a></li>
+        </ul>
+
+
+
+
+        <h1 class="title  sep">Transcriptions</h1>
+
+        <article class="grid  grid--double">
+          <div class="grid__item  two-thirds  palm-one-whole">
+
+            <h1 class="flush--bottom">Adeline Smith</h1>
+            <h2 class="gamma">Baptism</h2>
+
+            <dl class="data">
+
+              <dt class="data__name">County</dt>
+              <dd class="data__value">Kent</dd>
+
+              <dt class="data__name">Place</dt>
+              <dd class="data__value">Deptford</dd>
+              <dd class="data__value">Deptford</dd>
+              <dd class="data__value">Deptford</dd>
+
+              <dt class="data__name">Registration number</dt>
+              <dd class="data__value">1924</dd>
+
+              <dt class="data__name">Baptism date</dt>
+              <dd class="data__value">1928</dd>
+
+              <dt class="data__name">Gender</dt>
+              <dd class="data__value">F</dd>
+
+              <dt class="data__name">Person abode</dt>
+              <dd class="data__value">8 Franklin</dd>
+
+            </dl>
+
+          </div>
+          <div class="grid__item  one-third  palm-one-whole">
+
+            <a href="#" class="btn-img">
+              <img src="http://dummyimage.com/283/000/fff/?text=+">
+              <span>View original</span>
+            </a>
+
+            <div class="push--ends  text--center">
+              <a href="#" class="btn">Report an error</a>
+            </div>
+
+
+            <h3>File</h3>
+
+            <dl class="data  data--compact">
+
+              <dt class="data__name">Register type</dt>
+              <dd class="data__value">398</dd>
+
+              <dt class="data__name">Record type</dt>
+              <dd class="data__value">BA</dd>
+
+              <dt class="data__name">File name</dt>
+              <dd class="data__value">KENDEPES38.CSV</dd>
+
+              <dt class="data__name">Transcriber syndicate</dt>
+              <dd class="data__value">Kent</dd>
+
+            </dl>
+
+          </div>
+        </article>
+
+
+
+
+        <h1 class="title  sep">Intro</h1>
+
+        <section class="grid">
+
+          <div class="grid__item  two-thirds  palm-one-whole">
+
+            <p class="lede"> Maecenas aliquet lacus odio. Praesent ac congue metus. Pellentesque quis urna bibendum, ornare urna vitae, bibendum massa.</p>
+
+            <p class="lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis, lorem et malesuada mattis, tortor dolor efficitur velit, ut fringilla nibh massa nec nisl. Maecenas massa massa, iaculis eget neque in, sollicitudin mollis velit. Curabitur sodales libero vitae nunc gravida commodo. Fusce vulputate mattis risus, a laoreet libero venenatis at.</p>
+
+          </div>
+
+          <div class="grid__item   one-third  palm-one-whole  text--center">
+
+            <a href="#" class="btn  btn--large">Start search <i class="btn__icon  icon__chevron-right" aria-hidden="true"></i></a>
+
+          </div>
+
+        </section>
+
+
+
+
+        <h1 class="title  sep">Shout outs</h1>
+
+        <section class="grid  grid--half">
+
+          <div class="grid__item  one-third  palm-one-whole">
+            <a href="#" class="banner  banner--brown">
+              <h3 class="banner__title">We're looking for volunteers</h3>
+              <p class="banner__body">FreeBMD is a volunteer run project. We’re always looking for new people to help transcribe data and support the running of the project.</p>
+            </a>
+          </div>
+
+          <div class="grid__item  one-third  palm-one-whole">
+            <a href="#" class="banner  banner--navy">
+              <h3 class="banner__title  banner__title--bold">Make a donation</h3>
+              <p class="banner__body">FreeBMD is exactly that, Free. As a registered charity, we don’t charge to use this site. However, FreeBMD costs money to run so please consider making a small donation.</p>
+            </a>
+          </div>
+
+          <div class="grid__item  one-third  palm-one-whole">
+            <a href="#" class="banner-img">
+              <img src="http://dummyimage.com/311/000/fff/">
+            </a>
+          </div>
+
+        </section>
+
+
+
+
+        <h1 class="title  sep">Stats box</h1>
+
+        <section class="text--center">
+
+          <div class="stat-group">
+
+            <header class="stat-group__header">
+              <h3 class="stat-group__header__title">FreeBMD Status</h3>
+            </header>
+
+            <dl class="stat">
+              <dt class="stat__title">Marriages</dt>
+              <dd class="stat__value  text--magenta">4,678,103</dd>
+            </dl>
+
+            <dl class="stat">
+              <dt class="stat__title">Baptisms</dt>
+              <dd class="stat__value  text--teal">4,678,103</dd>
+            </dl>
+
+            <dl class="stat">
+              <dt class="stat__title">Burials</dt>
+              <dd class="stat__value  text--brown">4,678,103</dd>
+            </dl>
+
+            <footer class="stat-group__footer">
+              <p class="stat-group__footer__primary"><strong>LAST UPDATE:</strong> Started on 30.06.2014 and completed on 1.06.2014</p>
+              <p class="stat-group__footer__secondary">On 8 AUG 2014 FreeBMD users did 26,330 searches</p>
+            </footer>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+
+
+
+    <h1 class="title  sep  container">Site Footer</h1>
+
+    <footer class="site__footer">
+
+      <div class="island  island--magenta  flush--bottom">
+        <div class="container  text--center">
+          <p>Vestibulum sollicitudin eu mi eu sodales. Proin id elementum orci. In lacinia lobortis dui in semper. Vivamus a justo quis orci blandit euismod. Cras a varius quam. Mauris laoreet ligula tortor, et ullamcorper odio tincidunt id. Integer pellentesque id nibh id maximus. Suspendisse vel lobortis sem, in fermentum tellus.</p>
+
+          <p>Pellentesque risus dui, vulputate at vehicula vitae, blandit vitae metus. Mauris dignissim eget ex in eleifend. Nunc id tellus lacus. In eget porttitor quam, luctus iaculis nulla. Praesent lectus sapien, vehicula ac volutpat at, cursus sit amet quam. Mauris feugiat purus augue, sit amet sollicitudin odio congue ut.</p>
+        </div>
+      </div>
+
+      <div class="icon__honeycomb--bottom-left  island  flush--bottom">
+        <div class="container  text--center">
+          <h3 class="epsilon  text--navy">Other FreeUkGenealogy</h3>
+
+          <ul class="icon-list">
+            <li><a href="#" class="icon__freecen"><span class="accessibility">FreeCen</span></a></li>
+            <li><a href="#" class="icon__freereg"><span class="accessibility">FreeReg</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="island  island--dark  flush--bottom  milli  text--white">
+        <div class="container">
+          <div class="grid">
+
+            <div class="grid__item  one-quarter  palm-one-third">
+              <ul class="nav  nav--stacked  lap-and-up-flush--bottom">
+                <li><a href="#">Terms &amp; conditions</a></li>
+                <li><a href="#">Usage policy</a></li>
+                <li><a href="#">Company details</a></li>
+              </ul>
+            </div>
+
+            <div class="grid__item  one-quarter  palm-one-third">
+              <ul class="nav  nav--stacked  lap-and-up-flush--bottom">
+                <li><a href="#">Become a transcriber</a></li>
+                <li><a href="#">Help with transcribing</a></li>
+                <li><a href="#">Stats and info</a></li>
+              </ul>
+            </div>
+
+            <div class="grid__item  one-quarter  palm-one-third">
+              <ul class="nav  nav--stacked  lap-and-up-flush--bottom">
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+
+            <div class="grid__item  one-quarter  palm-one-whole">
+              <a href="#" class="icon__freeukgen__project--light"><span class="accessibility">A project by FreeUKGenealogy</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="island  island--grey  flush--bottom">
+        <div class="container  text--center">
+          <p class="micro  text--grey">Search engine, layout and database Copyright © 1998-2013 The Trustees of Free UK Genealogy (Ben Laurie, Graham Hart, Camilla von Massenbach, David Mayall and Jim Killock), a charity registered in England and Wales, Number 1096940. We make no warranty whatsoever as to the accuracy or completeness of the FreeBMD data.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- example offcanvas switching code -->
+  <script src="scripts/dist/classie.js"></script>
+  <script charset="utf-8">
+
+    var el = document.getElementById("trigger-offcanvas");
+
+    var switchOffCanvas = function() {
+      classie.toggle( document.body, 'offcanvas--active' );
+      classie.toggle( el, 'site__header__menu-btn--active' );
+    }
+
+    if (el.addEventListener) {
+      el.addEventListener('click', switchOffCanvas, false);
+    } else if (el.attachEvent)  {
+      el.attachEvent('onclick', switchOffCanvas);
+    }
+
+  </script>
+</body>
+</html>

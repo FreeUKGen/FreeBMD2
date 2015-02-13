@@ -1,0 +1,15 @@
+# Site settings
+title: Free BMD
+email: josh@supercooldesign.co.uk
+description: "Example frontend build for the Free UK Genealogy Free BMD project"
+baseurl: ""
+url: "http://supercooldesign.co.uk"
+twitter_username: supercooldesign
+github_username:  supercool
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Other bits
+exclude: [styles/css/preview.html, styles/css/grunticon.loader.js, images/svg, node_modules, bower_components, package.json, bower.json, npm-debug.log, Gruntfile.js, styles/scss, grunticon.hbs, README.md]

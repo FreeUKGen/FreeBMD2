@@ -1,0 +1,8 @@
+.DS_Store
+.sass-cache
+*.sublime-workspace
+*.sublime-project
+
+# ignore node/bower files
+node_modules
+bower_components

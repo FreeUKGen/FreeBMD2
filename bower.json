@@ -1,0 +1,19 @@
+{
+  "name": "FreeUKGenealogy-Free-BMD",
+  "version": "1.0.0",
+  "authors": "Josh Angell <josh@supercooldesign.co.uk>",
+  "description": "Frontend resources for the Free UK Genealogy Free BMD project",
+  "license": "MIT",
+  "homepage": "http://supercooldesign.co.uk/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "FreeUKGenealogy-Core-Frontend": "git@github.com:FreeUKGen/Core-Frontend.git"
+  }
+}
